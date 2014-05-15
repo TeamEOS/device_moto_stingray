@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_stingray.mk \
-    $(LOCAL_DIR)/omni_stingray.mk
+    $(LOCAL_DIR)/full_stingray.mk

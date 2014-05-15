@@ -25,9 +25,15 @@ PRODUCT_BRAND := Android
 PRODUCT_MODEL := Xoom LTE
 
 PRODUCT_MANUFACTURER := MOTOROLA
-PRODUCT_RESTRICT_VENDOR_FILES := true
+PRODUCT_RESTRICT_VENDOR_FILES := false
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/moto/stingray/device.mk)
+
+$(call inherit-product, vendor/eos/config/common_full_phone.mk)
+
+# Copy Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/eos/prebuilt/common/bootanimation/1080.zip:system/media/bootanimation.zip
 
 $(call inherit-product-if-exists, vendor/moto/wingray/wingray-vendor.mk)
 $(call inherit-product-if-exists, vendor/moto/stingray/stingray-vendor.mk)
